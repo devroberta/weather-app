@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { enviroment } from 'environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherAppService {
 
-  private apiKey = '610bd4bf509e41b2d666b1be85ab117e';
+  private apiKey = enviroment.apiKey;
 
   constructor(private http: HttpClient) { }
 
